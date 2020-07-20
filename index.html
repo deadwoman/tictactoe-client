@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+     <h1>Tic-Tac-Toe!</h1>
+      <div class="container">
+          <div class="col-12 box1">
+            <form id="sign-up">
+                <input name="credentials[email]" placeholder="email" type="email">
+                <input name="credentials[password]" placeholder="password" type="password">
+                <input name="credentials[password_confirmation]" placeholder="confirm password" type="password">
+                <button type="submit">Sign Up!</button>
+            </form>
+
+            <br>
+
+            <form id="sign-in">
+                <input name="credentials[email]" placeholder="enter email" type="email"/>
+                <input name="credentials[password]" placeholder="enter password" type="password"/>
+                <button type="submit">Sign In</button>
+            </form>
+
+            <br>
+
+            <form id="change-password">
+                <input name="passwords[old]" placeholder="old password" type="password">
+                <input name="passwords[new]" placeholder="new password" type="password">
+                <button type="submit">Change Password</button>
+            </form>
+
+            <br>
+
+            <button id="sign-out">Sign Out</button>
+          </div>
+        </div>
+        <button id="start-game">Start Game!</button>
+        <div class="row">
+          <div class="col-3 box2">Wins</div>
+            <div class="col-xs-10 col-sm-8 col-md-6 game-grid">
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+            </div>
+          <div class="col-3 box4"> <p id="message"></p> </div>
+          <div class="col-3 box5"> fastest games </div>
+          <div class="col-3 box6">footer</div>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+@import '~bootstrap/scss/bootstrap';
+$alt-color: $purple;
+$body-bg-color: $gray-200;
+$font-color: $light;
+$index-color: rgb(115, 129, 241);
+$border-color: rgb(255, 215, 0);
+
+body {
+  background-color: $body-bg-color;
+}
+
+.alt-color {
+  background-color: $alt-color;
+}
+
+.box1 {
+  background-color: $index-color;
+  border: 10px solid $border-color;
+  display: flex;
+  height: 150px;
+}
+
+.box2 {
+  background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+}
+
+
+.box4 {
+  align-items: center;
+  background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+}
+
+.box5 {
+  align-items: center;
+  background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.box6 {
+  align-items: center;
+  background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  justify-content: center;
+}
+
+.start-game {
+  justify-content: center;
+}
+
+.game-grid {
+  align-items: center;
+  background: $body-bg-color;
+  background-color: $secondary;
+  border: 10px solid $border-color;
+  border-radius: 50px;
+  color: $font-color;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 600px;
+}
+
+.game-spots {
+  background: $index-color;
+  cursor: pointer;
+  height: 160px;
+  width: 160px;
+}
+
+h1 {
+  text-align: center;
+}
