@@ -127,3 +127,10 @@ Developers should run these often!
 1. All content is licensed under a CC­BY­NC­SA 4.0 license.
 1. All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
+
+
+
+## Wireframe Planning
+
+[Wireframe 1](https://imgur.com/a/XlFEvsM)
+[Wireframe 2](https://imgur.com/a/f3z2Jdc)

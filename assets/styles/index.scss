@@ -1,12 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
-$alt-color: $purple;
-$body-bg-color: $gray-200;
-$font-color: $light;
-$index-color: rgb(115, 129, 241);
-$border-color: rgb(255, 215, 0);
+$alt-color: rgb(115, 80, 241);
+$body-bg-color: rgb(255, 215, 0);
+$font-color: $black;
+$index-color: rgb(255, 215, 0);
+$border-color: $black;
 
 body {
   background-color: $body-bg-color;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 .alt-color {
@@ -14,15 +15,17 @@ body {
 }
 
 .box1 {
-  background-color: $index-color;
+  background-color: rgb(254, 232, 0);
   border: 10px solid $border-color;
   display: flex;
   height: 150px;
+  border-radius: 10px;
 }
 
 .box2 {
-  background-color: $secondary;
-  border: 1px solid $white;
+  background-color: rgb(254, 232, 0);
+  border: 4px solid $black;
+  border-radius: 10px;
   color: $font-color;
   display: flex;
   height: 400px;
@@ -31,27 +34,31 @@ body {
 
 
 .box4 {
-  background-color: $secondary;
-  border: 1px solid $white;
+  background-color: rgb(254, 232, 0);
+  border: 4px solid $black;
+  border-radius: 10px;
   color: $font-color;
   display: flex;
   height: 400px;
+  justify-content: center;
 }
 
 .box5 {
   align-items: center;
-  background-color: $secondary;
-  border: 1px solid $white;
+  background-color: rgb(255, 215, 0);
+  border: 1px solid rgb(254, 179, 67);
+  border-radius: 10px;
   color: $font-color;
   display: flex;
   height: 100px;
   justify-content: center;
 }
-
+//fastest games & footer
 .box6 {
   align-items: center;
-  background-color: $secondary;
-  border: 1px solid $white;
+  background-color: rgb(255, 215, 0);
+  border: 1px solid rgb(254, 179, 67);
+  border-radius: 10px;
   color: $font-color;
   display: flex;
   flex-wrap: wrap;
@@ -66,22 +73,32 @@ body {
 .game-grid {
   align-items: center;
   background: $body-bg-color;
-  background-color: $secondary;
-  border: 10px solid $border-color;
-  border-radius: 50px;
+  background-color: $black;
+  border: 10x solid $border-color;
+  border-radius: 10px;
   color: $font-color;
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 1px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: 600px;
+  display: inline-grid;
+  height: 400px;
 }
 
 .game-spots {
-  background: $index-color;
-  cursor: pointer;
-  height: 160px;
-  width: 160px;
+    border: 5px solid rgb(255, 215, 0);
+    border-radius: 10px;
+    height: calc(45vh / 3);
+    font-size: calc(45vh / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px rgb(254, 179, 67);
+    text-shadow: 2px 2px white;
+    user-select: none;
+    &:hover {
+    background-color: rgb(255, 215, 0);
+  }
 }
 
 h1 {
