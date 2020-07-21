@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe!</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -21,25 +21,19 @@
                 <input name="credentials[password_confirmation]" placeholder="confirm password" type="password">
                 <button type="submit">Sign Up!</button>
             </form>
-
             <br>
-
             <form id="sign-in">
                 <input name="credentials[email]" placeholder="enter email" type="email"/>
                 <input name="credentials[password]" placeholder="enter password" type="password"/>
                 <button type="submit">Sign In</button>
             </form>
-
             <br>
-
             <form id="change-password">
                 <input name="passwords[old]" placeholder="old password" type="password">
                 <input name="passwords[new]" placeholder="new password" type="password">
                 <button type="submit">Change Password</button>
             </form>
-
             <br>
-
             <button id="sign-out">Sign Out</button>
           </div>
         </div>
@@ -47,17 +41,19 @@
         <div class="row">
           <div class="col-3 box2">Wins</div>
             <div class="col-xs-10 col-sm-8 col-md-6 game-grid">
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-12 game-spots"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot1" data-cell-index="0"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot2" data-cell-index="1"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot3" data-cell-index="2"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot4" data-cell-index="3"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot5" data-cell-index="4"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot6" data-cell-index="5"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot7" data-cell-index="6"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot8" data-cell-index="7"></div>
+              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot9" data-cell-index="8"></div>
             </div>
-          <div class="col-3 box4"> <p id="message"></p> </div>
+          <div class="col-3 box4">
+            <div id="status"></div>
+            <div id="message"></div>
           <div class="col-3 box5"> fastest games </div>
           <div class="col-3 box6">footer</div>
         </div>

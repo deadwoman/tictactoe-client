@@ -31,13 +31,11 @@ body {
 
 
 .box4 {
-  align-items: center;
   background-color: $secondary;
   border: 1px solid $white;
   color: $font-color;
   display: flex;
   height: 400px;
-  justify-content: center;
 }
 
 .box5 {
@@ -88,4 +86,8 @@ body {
 
 h1 {
   text-align: center;
+}
+
+.spot-image {
+  height: inherit;
 }
