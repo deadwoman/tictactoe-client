@@ -26,6 +26,5 @@ As a user I want to be able to create an account. As a user I want to know how m
 - Showing the user name (email)
 - Make it a mobile friendly page
 - Have a separate 'Stats' section using div.
-- Fix the error where "New User? Sign Up" disappears once logged in and on the gameboard page.
 - I want to center the log in/sign up credentials.
 - I want to center the nav bar.
