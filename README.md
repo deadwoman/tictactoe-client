@@ -1,12 +1,12 @@
-[Emily's Tic Tac Toe Client]](https://deadwoman.github.io/tictactoe-client/)
+## Important Links
+[Emily's Tic Tac Toe Client](https://deadwoman.github.io/tictactoe-client/)
 
 ## Technologies Used
-- Auth & Game API
 - HTML
-- SCSS
+- CSS/SASS
 - Bootstrap
 - JavaScript
-- JQuery Ajax
+- JQuery
 
 ## Wireframe Planning
 
