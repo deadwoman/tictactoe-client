@@ -8,7 +8,7 @@ const SignUpSuccess = function () {
 }
 
 const SignUpFailure = function () {
-    $('.create-account-message').text('Please create an account to access the website!')
+    $('.create-account-message').text('Account creation unsuccessful. Try again!')
 }
 
 const SignInSuccess = function (response) {
