@@ -1,50 +1,54 @@
 'use strict'
-const getFormFields = require('../../../lib/get-form-fields.js')
-const api = require('./api.js')
+const api = require('./api')
 const ui = require('./ui')
+const getFormFields = require('../../../lib/get-form-fields')
 
 const onSignUp = function (event) {
-  event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
+    event.preventDefault()
+    const data = event.target
+    const formData = getFormFields(data)
 
-  api.signUp(formData)
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFail)
+    api.signUp(formData)
+        .then(ui.SignUpSuccess)
+        .catch(ui.SignUpFailure)
 }
 
-const onLogin = function (event) {
-  event.preventDefault()
-  const formData = getFormFields(event.target)
-  console.log(formData)
-  api.login(formData)
-    .then(ui.loginSuccess)
-    .catch(ui.loginFail)
+const onSignIn = function (event) {
+    event.preventDefault()
+    const data = event.target
+    const formData = getFormFields(data)
+    api.SignIn(formData)
+        .then(ui.SignInSuccess)
+        .catch(ui.SignInFailure)
 }
 
-const onLogout = function () {
-  api.logout()
-    .then(ui.logoutSuccess)
-    .catch(ui.logoutFail)
+const displayChangePassword = function (event) {
+    $('.change-password-container').show()
+    $('#game-board').hide()
+    $('#winner-message').hide()
 }
 
-const onChangepw = function (event) {
-  event.preventDefault()
-  const formData = getFormFields(event.target)
-  api.changepw(formData)
-    .then(ui.changepwSuccess)
-    .catch(ui.changepwFail)
+const onChangePassword = function (event) {
+    event.preventDefault()
+    const form = event.target
+    const formData = getFormFields(form)
+
+    api.ChangePassword(formData)
+        .then(ui.ChangePasswordSuccess)
+        .catch(ui.ChangePasswordFailure)
 }
-const stats = function (event) {
-  api.getStats()
-    .then(ui.getStatsSuccess)
-    .catch(ui.getStatsFail)
+
+const onSignOut = function (event) {
+    event.preventDefault()
+    api.SignOut()
+        .then(ui.signOutSuccess)
+        .catch(ui.signOutFailure)
 }
 
 module.exports = {
-  onSignUp,
-  onLogin,
-  onLogout,
-  onChangepw,
-  stats
+    onSignUp,
+    onSignIn,
+    onChangePassword,
+    displayChangePassword,
+    onSignOut
 }

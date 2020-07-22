@@ -1,18 +1,34 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
-
 const authEvents = require('./auth/events')
 const gameEvents = require('./game/events')
+
 $(() => {
-  $('#sign-up').on('submit', authEvents.onSignUp)
+
+  // Features to hide
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('#game-board').hide()
+  $('#game-controls').hide()
+  $('.view-header-image').hide()
+  $('#winner-message').hide()
+  $('.change-password-container').hide()
+  $('.sign-in-message').hide()
+
+  // Account sign up
+  $('#create-account').on('submit', authEvents.onSignUp)
+  // Sign in feature
   $('#sign-in').on('submit', authEvents.onSignIn)
+  // Change password feature
+  $('#displayChangePassword').on('click', authEvents.displayChangePassword)
+  // Change password display
   $('#change-password').on('submit', authEvents.onChangePassword)
+  // Sign out feature
   $('#sign-out').on('click', authEvents.onSignOut)
-  // game events
-  $('#start-game').on('click', gameEvents.onStartGame)
+  //Start game!
+  $('#new-game').on('click', gameEvents.onCreateGame)
+  $('.square').on('click', gameEvents.trackBoard)
+  // Reset the game to a new Game. *
+  $('#reset-game').on('click', gameEvents.onResetGame)
+
 })

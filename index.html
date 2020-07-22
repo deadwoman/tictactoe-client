@@ -13,50 +13,121 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
-     <h1>Tic-Tac-Toe!</h1>
-      <div class="container">
-          <div class="col-12 box1">
-            <form id="sign-up">
-                <input name="credentials[email]" placeholder="email" type="email">
-                <input name="credentials[password]" placeholder="password" type="password">
-                <input name="credentials[password_confirmation]" placeholder="confirm password" type="password">
-                <button type="submit">Sign Up!</button>
-            </form>
-            <br>
-            <form id="sign-in">
-                <input name="credentials[email]" placeholder="enter email" type="email"/>
-                <input name="credentials[password]" placeholder="enter password" type="password"/>
-                <button type="submit">Sign In</button>
-            </form>
-            <br>
-            <form id="change-password">
-                <input name="passwords[old]" placeholder="old password" type="password">
-                <input name="passwords[new]" placeholder="new password" type="password">
-                <button type="submit">Change Password</button>
-            </form>
-            <br>
-          </div>
-        </div>
-        <button id="start-game">Start Game!</button>
-        <div class="row">
-          <div class="col-3 box2">Stats</div>
-            <div class="col-xs-10 col-sm-8 col-md-6 game-grid">
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot1" data-cell-index="0"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot2" data-cell-index="1"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot3" data-cell-index="2"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot4" data-cell-index="3"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot5" data-cell-index="4"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot6" data-cell-index="5"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot7" data-cell-index="6"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot8" data-cell-index="7"></div>
-              <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot9" data-cell-index="8"></div>
+<!-- LANDING PAGE- LOGIN/SIGN UP -->
+        <div class="container h-100"></div>
+            <div class="col">
+        <h1 class="display-2 text-center ">Tic-Tac-Toe!</h1>
+      </div>
+    <div class="row align-items-center">
+<!--SIGN UP FIELDS-->
+      <div class="col-12 col-md-6 col-size">
+        <div class="container">
+          <h4>New User? Sign Up:</h4>
+          <form id="create-account">
+            <div class="form-group">
+              <label for="email">email address: </label>
+              <input type="email" id="email" class="form-control p-4" placeholder="email" name="credentials[email]">
             </div>
-          <div class="col-3 box4">How to Play</div>
-            <div id="status"></div>
-            <div id="message"></div>
-<br>
+            <div class="form-group">
+              <label for="password">password: </label>
+              <input type="password" id="password" class="form-control p-4" placeholder="password"
+                name="credentials[password]">
+            </div>
+            <div class="form-group">
+              <label for="password_confirmation"> confirm password: </label>
+              <input type="password" id="password_confirmation" class="form-control p-4"
+                placeholder="confirm password" name="credentials[password_confirmation]">
+            </div>
+            <button type="submit" class="btn btn-info btn-create-account p-3"> Let's Play!</button>
+          </form>
+          <div class="create-account-message pt-4"></div>
+</div>
+
+<!--RETURNING USER SECTION -->
+    <form id="sign-in">
+      <h4>Returning User? Login:</h4>
+      <div class="form-group">
+        <label for="email">Email address: </label>
+        <input type="email" id="email" class="form-control p-4" placeholder="email" name="credentials[email]">
+      </div>
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" id="password" class="form-control p-4" placeholder="password"
+          name="credentials[password]">
+      </div>
+      <button type="submit" class="btn btn-info btn-login-account p-3"> I'm Back!</button>
+    </form>
+    <div class="sign-in-message-success mt-4"> </div>
+    <div class="sign-in-message-error mt-4"> </div>
+</div>
+</div>
+
+<!-- GAMEBOARD PAGE-->
+<div class="view-header-image">
+  <nav class="navbar navbar-expand-sm navbar-inner static-top py-4" id="navbar-site">
+    <div class="container">
+      <a class="navbar-brand d-sm-none d-md-block d-none" href="#">
+        <img src="public/tictactoe.png" alt="" id="logo">
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item px-2">
+          <a class="nav-link text-dark font-weight-bold" href="#" id="displayChangePassword">Change Password</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link text-dark font-weight-bold" href="#" id="sign-out">Sign Out</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link text-dark font-weight-bold" href="#" id="new-game">New Game</a>
+        </li>
+        <a class="nav-link text-dark font-weight-bold" href="#" id="reset-game">Start Over</a>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="text-center">
+      <div class="pt-5">
+            </div>
+
+            <!--PASS CHANGE-->
+    <div class="container change-password-container authorized my-5 py-4">
+          <form id="change-password">
+          <h4 class="py-4">Change Password</h4>
+          <div class="form-group">
+          <label for="password"> Old Password: </label>
+          <input type="password" id="password" class="form-control p-4" placeholder="current password" name="passwords[old]">
+          </div>
+          <div class="form-group">
+          <label for="password"> New Password: </label>
+          <input type="password" id="password" class="form-control p-4" placeholder="new password" name="passwords[new]">
+                          </div>
+                          <button type="submit" class="btn btn-info p-3 btn-change-password"> Change Password </button>
+                        </form>
+                        <div class="change-password-message py-2"> </div>
+      </div>
+
+            <!-- RESET & NEW GAME -->
+            <div class="container game-controls py-2" id="game-controls">
+<!--GAMEBOARD GRID-->
+   <div class="row">
+      </div>
+        <div class="col-xs-10 col-sm-8 col-md-6 game-grid">
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot1" data-cell-index="0"></div>
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot2" data-cell-index="1"></div>
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot3" data-cell-index="2"></div>
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot4" data-cell-index="3"></div>
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot5" data-cell-index="4"></div>
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot6" data-cell-index="5"></div>
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot7" data-cell-index="6"></div>
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot8" data-cell-index="7"></div>
+          <div class="col-xs-4 col-sm-6 col-md-8 col-lg-10 col-xl-12 game-spots" id="spot9" data-cell-index="8"></div>
         </div>
-          <button id="sign-out">Sign Out</button>
+        <div id="status"></div>
+        <div id="message"></div>
+ <br>
+    </div>
+    </div>
+
   </body>
 </html>

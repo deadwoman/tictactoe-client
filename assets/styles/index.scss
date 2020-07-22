@@ -16,12 +16,12 @@ body {
 
 .box1 {
   background-color: rgb(254, 232, 0);
-  border: 10px solid $border-color;
+  border: 5px solid $border-color;
   display: flex;
   height: 150px;
   border-radius: 10px;
 }
-
+//box2 and box4 contains the Stats ----decided I want to remove this. Will use in V2 possibly.
 .box2 {
   background-color: rgb(254, 232, 0);
   border: 4px solid $black;
@@ -31,7 +31,6 @@ body {
   height: 400px;
   justify-content: center;
 }
-
 
 .box4 {
   background-color: rgb(254, 232, 0);
@@ -53,7 +52,6 @@ body {
   height: 100px;
   justify-content: center;
 }
-//fastest games & footer
 .box6 {
   align-items: center;
   background-color: rgb(255, 215, 0);
@@ -64,6 +62,12 @@ body {
   flex-wrap: wrap;
   height: 100px;
   justify-content: center;
+}
+
+.btn-create-account, .btn-login-account{
+    background-color: $black;
+    border-color: black;
+    width: 30%;
 }
 
 .start-game {
@@ -83,6 +87,28 @@ body {
   grid-template-rows: repeat(3, 1fr);
   display: inline-grid;
   height: 400px;
+}
+
+.X{
+    font-size: 30px;
+    background-image: url('public/x-choice.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.o{
+    font-size: 30px;
+    color: black;
+    background-image: url('public/o-choice.png');
+    background-repeat: no-repeat;
+    width: 70%;
+    background-position: center;
+}
+
+.btn-change-password{
+    background-color: $black;
+    border-color: none;
+    width: 200px;
 }
 
 .game-spots {
@@ -105,6 +131,6 @@ h1 {
   text-align: center;
 }
 
-.spot-image {
-  height: inherit;
+li.nav-item > a:hover{
+  text-decoration: underline;
 }
