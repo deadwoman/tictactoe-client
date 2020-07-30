@@ -60,6 +60,14 @@ const signOutFailure = function () {
     $('.sign-out-message').text('You must be logged in first!')
 }
 
+const getStatsSuccess = function (response) {
+  if (response.games.length === 0) {
+    $('#number-wins').text('0 games played! Lets start!')
+  } else {
+    $('#number-wins').html('<b>Total number of games played: ' + response.games.length + '</b>').fadeIn(2000)
+  }
+}
+
 module.exports = {
     SignUpSuccess,
     SignUpFailure,
@@ -68,5 +76,6 @@ module.exports = {
     ChangePasswordSuccess,
     ChangePasswordFailure,
     signOutSuccess,
-    signOutFailure
+    signOutFailure,
+    getStatsSuccess
 }

@@ -25,10 +25,19 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   // Sign out feature
   $('#sign-out').on('click', authEvents.onSignOut)
+  //stats
+  $('#stats').on('click',authEvents.stats)
   //Start game!
   $('#new-game').on('click', gameEvents.onCreateGame)
   $('.square').on('click', gameEvents.trackBoard)
   // Reset the game to a new Game. *
   $('#reset-game').on('click', gameEvents.onResetGame)
+
+// start a game
+//  $('#start-game').on('click', gameEvents.onStartGame)
+
+  $('.game-spots').on('click', gameEvents.onCellClick)
+  //$('#reset').on('click', gameEvents.onReset)
+
 
 })

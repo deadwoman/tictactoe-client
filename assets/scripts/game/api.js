@@ -1,17 +1,66 @@
 const config = require('../config')
 const store = require('../store')
-
-const CreateGame = function (token) {
-    return $.ajax({
-        url: config.apiUrl + '/games',
-        method: 'POST',
-        headers: {
-            Authorization: 'Bearer ' + store.user.token
+const startGame = function () {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    data: '{}'
+  })
+}
+const userChoice = function (index, player, over) {
+  return $.ajax({
+    headers: {
+      // ui signin success 
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/games/' + store.game._id,
+    method: 'PATCH',
+    data: {
+      game: {
+        cell: {
+          index: index,
+          value: player
         },
-        contentType: 'application/json',
-    })
+        over: over
+      }
+    }
+  })
+}
+const gameOver = function () {
+  return $.ajax({
+    headers: {
+      // ui signin success
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/games/' + store.game._id,
+    method: 'PATCH',
+    data: {
+      game: {
+        cell: {
+          index: -1,
+          value: ''
+        },
+        over: true
+      }
+    }
+  })
+}
+const getGames = function () {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/games?over=true',
+    method: 'GET'
+  })
 }
 
 module.exports = {
-    CreateGame,
+  startGame,
+  userChoice,
+  gameOver,
+  getGames
 }

@@ -14,44 +14,44 @@ body {
   background-color: $alt-color;
 }
 
-.box1 {
-  background-color: rgb(254, 232, 0);
-  border: 5px solid $border-color;
-  display: flex;
-  height: 150px;
-  border-radius: 10px;
-}
+//.box1 {
+  //background-color: rgb(254, 232, 0);
+  //border: 5px solid $border-color;
+  //display: flex;
+  //height: 150px;
+  //border-radius: 10px;
+//}
 //box2 and box4 contains the Stats ----decided I want to remove this. Will use in V2 possibly.
-.box2 {
-  background-color: rgb(254, 232, 0);
-  border: 4px solid $black;
-  border-radius: 10px;
-  color: $font-color;
-  display: flex;
-  height: 400px;
-  justify-content: center;
-}
+//.box2 {
+  //background-color: rgb(254, 232, 0);
+  //border: 4px solid $black;
+  //border-radius: 10px;
+  //color: $font-color;
+  //display: flex;
+  //height: 400px;
+  //justify-content: center;
+//}
 
-.box4 {
-  background-color: rgb(254, 232, 0);
-  border: 4px solid $black;
-  border-radius: 10px;
-  color: $font-color;
-  display: flex;
-  height: 400px;
-  justify-content: center;
-}
+//.box4 {
+//  background-color: rgb(254, 232, 0);
+  //border: 4px solid $black;
+  //border-radius: 10px;
+  //color: $font-color;
+  //display: flex;
+  //height: 400px;
+  //justify-content: center;
+//}
 
-.box5 {
-  align-items: center;
-  background-color: rgb(255, 215, 0);
-  border: 1px solid rgb(254, 179, 67);
-  border-radius: 10px;
-  color: $font-color;
-  display: flex;
-  height: 100px;
-  justify-content: center;
-}
+//.box5 {
+  //align-items: center;
+  //background-color: rgb(255, 215, 0);
+  //border: 1px solid rgb(254, 179, 67);
+  //border-radius: 10px;
+  //color: $font-color;
+  //display: flex;
+  //height: 100px;
+  //justify-content: center;
+//}
 .box6 {
   align-items: center;
   background-color: rgb(255, 215, 0);
@@ -87,22 +87,9 @@ body {
   grid-template-rows: repeat(3, 1fr);
   display: inline-grid;
   height: 400px;
-}
-
-.X{
-    font-size: 30px;
-    background-image: url('public/x-choice.png');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.o{
-    font-size: 30px;
-    color: black;
-    background-image: url('public/o-choice.png');
-    background-repeat: no-repeat;
-    width: 70%;
-    background-position: center;
+  width: 400px;
+  margin-top: 10px;
+  max-width: 400px;
 }
 
 .btn-change-password{
@@ -111,17 +98,20 @@ body {
     width: 200px;
 }
 
-.navbar-site{
+.navbar-nav{ //this is what centered the nav bar! Error fixed!
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 10px;
 }
 
 .game-spots {
     border: 5px solid rgb(255, 215, 0);
-    border-radius: 10px;
-    height: calc(45vh / 3);
-    font-size: calc(45vh / 3);
+    border-radius: 60px;
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,6 +127,18 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
 li.nav-item > a:hover{
   text-decoration: underline;
+}
+
+.spot-image {
+  height: inherit;
 }
