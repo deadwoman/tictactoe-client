@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Tic-Tac-Toe <img src="https://i.imgur.com/ThGI6f0.gif" alt="Happy Dance" style="height:170px;"> </h1>
+
+      <p id="message"></p>
+      <p id="index-game"></p>
+
+      <div class="unauth" id="unauth">
+      <h2> <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/squared-new_1f195.png" alt="new emoji" style="width:20px;"> New User? Sign Up:</h2>
+        <form class="sign-up" id="sign-up">
+          <h3>email address:</h3>
+          <input name="credentials[email]" placeholder="e-mail" type="text">
+          <br>
+          <h3>password:</h3>
+          <input name="credentials[password]" placeholder="password" type="password">
+          <br>
+          <h3>confirm password:</h3>
+          <input name="credentials[password_confirmation]" placeholder="confirm password" type="password"><br>
+          <button type="submit">Let's Play!</button>
+        </form>
+
+        <br>
+
+        <h2><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/clockwise-downwards-and-upwards-open-circle-arrows_1f503.png" alt="return emoji" style="width:20px;"> Returning User? Log-in: </h2>
+        <form id="sign-in">
+          <h3>email address:</h3>
+        <input name="credentials[email]" placeholder="e-mail" type="text">
+        <br>
+        <h3>password:</h3>
+        <input name="credentials[password]" placeholder="password" type="password">
+        <br>
+        <button type="submit">I'm Back!</button>
+      </form>
+      </div>
+
+      <div class="auth" id="auth">
+
+
+        <h4>Need to update your password?</h4>
+        <form id="change-password">
+          <input name="passwords[old]" placeholder="current password" type="password">
+          <input name="passwords[new]" placeholder="new password" type="password">
+          <br>
+          <button type="submit">Change Password</button>
+        </form>
+
+        <form id="create-game">
+          <button type="submit">Let's Play!</button>
+        </form>
+        
+        <form id="sign-out">
+          <button type="submit">Sign Out</button>
+        </form>
+
+      </div>
+
+      <div id="game-started">
+
+        <section class="gamelayout">
+          <div class="row h-100 board">
+            <div class="col-4 box" id="cell-0"></div>
+            <div class="col-4 box" id="cell-1"></div>
+            <div class="col-4 box" id="cell-2"></div>
+
+            <div class="col-4 box" id="cell-3"></div>
+            <div class="col-4 box" id="cell-4"></div>
+            <div class="col-4 box" id="cell-5"></div>
+
+            <div class="col-4 box" id="cell-6"></div>
+            <div class="col-4 box" id="cell-7"></div>
+            <div class="col-4 box" id="cell-8"></div>
+          </div>
+          <br>
+          <h5>I believe in you!<br>
+<img src="https://media1.tenor.com/images/399c44e34035c563aa09488724d5df28/tenor.gif?itemid=16865940" alt="Shiba" style="width:355px;"></h5>
+        </section>
+      </div>
+
+    </body>
+</html>
