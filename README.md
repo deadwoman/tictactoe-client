@@ -14,7 +14,7 @@ I used the Suggested Schedule as a loose reference. I hit a few snags along the 
 
 ## Wireframe Planning
 
-[Wireframe 1](https://imgur.com/a/XlFEvsM)
+[Wireframe 1](https://imgur.com/a/XlFEvsM) || 
 [Wireframe 2](https://imgur.com/a/f3z2Jdc)
 
 ## User Stories
