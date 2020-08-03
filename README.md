@@ -8,6 +8,10 @@
 - JavaScript
 - JQuery
 
+## Planning Story
+I used the Suggested Schedule as a loose reference. I hit a few snags along the way which led me to skipping around to other parts of the project and coming back to any sections that needed to be reevaluated and/or recoded. I started with a rough draft of code to just get the basic visuals and functions up and working. Along the way I had a lot of trouble getting the Tic-Tac-Toe board to work. Using the web browser Inspector, console logging, and Google helped with my troubleshooting. To give myself some piece of mind and to still be able to move along in the project I decided to come back to the gameplay part of the coding when everything else was done and out of the way.
+
+
 ## Wireframe Planning
 
 [Wireframe 1](https://imgur.com/a/XlFEvsM)
